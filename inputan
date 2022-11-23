@@ -1,0 +1,16 @@
+#Jumlah sampel yang diambil
+N = 600;
+#Time sampling
+dt = 1.0/200.0
+#interval waktu
+t = np.linspace(0.0, N*dt, N)
+#mendefinisikan fungsi yang akan dilakukan DFT
+meong = input("""
+Masukkan angka sesuai fungsi sinyalnya: 
+dirac delta = 1
+konstanta = 2
+e^jw0n = 3
+cos(w0n) = 4
+sin(w0n) = 5
+heaviside = 6
+""")
