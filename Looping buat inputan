@@ -1,0 +1,16 @@
+if meong == "1":
+    y = signal.unit_impulse(len(t), 'mid')
+elif meong == "2":
+    maman = float(input("Masukkan nilai k (konstanta) : "))
+    y = [maman for i in range(len(t))]
+elif meong == "3":
+    burik  = float(input("Masukkan nilai w0 (omega 0) dalam pi : "))
+    y = np.exp(burik*np.pi*t)
+elif meong == "4":
+    pastel  = float(input("Masukkan nilai w0 (omega 0) dalam pi : "))
+    y = np.cos(pastel*np.pi*t)
+elif meong == "5":
+    ibnu  = float(input("Masukkan nilai w0 (omega 0) dalam pi : "))
+    y = np.sin(ibnu*np.pi*t)
+elif meong == "6":
+    y = np.heaviside(t, len(t)/2)
