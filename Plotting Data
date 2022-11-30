@@ -1,0 +1,30 @@
+#mengatur ukuran panjang dan lebar grafik
+plt.figure(figsize=(5,15))
+#plot grafik data mentah
+plt.subplot(3, 1, 1)
+plt.plot(t, y, '-')
+#untuk memberikan judul pada grafik data mentah
+plt.title('Data Mentah')
+#untuk memberikan subjudul pada sumbu-y
+plt.ylabel('Amp')
+
+#plot grafik Discrete Fourier Transform
+plt.subplot(3, 1, 2)
+plt.plot(xf, 2.0/N*np.abs(yf[0:N//2]),'r-')
+#untuk memberikan judul pada grafik data DFT
+plt.title('Power Spectral')
+#untuk memberikan subjudul pada masing-masing sumbu
+plt.xlabel('frek (Hz)')
+plt.ylabel('Spectral')
+
+#plot grafik hasil Inverse DFT
+plt.subplot(3, 1, 3)
+plt.plot(t, yi, 'y-')
+#untuk memberikan judul pada grafik hasil inverse DFT
+plt.title('Data Hasil IDFT')
+#untuk memberikan subjudul pada masing-masing sumbu
+plt.ylabel('Amp')
+#untuk memberikan grid pada kanvas
+plt.grid()
+#untuk menampilkan grafik
+plt.show()
